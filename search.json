@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MichWebStudies",
+    "section": "",
+    "text": "Desarrollo de aplicaciones con tecnologia web\n\n\nSemana 1: Mindset & Path & Tools\n\n\nObjetivo core del curso :\nCrear conocimiento que se pueda conectar a mis conocimientos base.\n\n\n\nconectar\n\n\n\n\nPrincipales herramientas :\n\nJava/Springboot.\nReact/Js/Jsx.\nApi Rest.\nBBDD/relacionales/no relacionales.\nLinux/VM.\nDevops/Quarto/Git.\n\n\n\nReconociendo Ecosistema de trabajo…\n\n\n\nTable 1: Ecosistema de trabajo Java\n\n\n\n\n\n\n\n\n\n\n\nSoftware core tools\ndevelopments Tool\nDeveloperTools\nDeVops\n\n\n\n\nJava SE\nMaven: pom.xml\nIDE: IntelliJ IDEA 2023.3.3 (Community Edition)\nphase: Sand-Box\n\n\nJDK open JDK21\nLombok, JUnit 4.11/5,  JavaFaker\n(Community Edition)Doc: Quarto markdownVersion Control: git & gitHub  mermaid UML\nLinu213 Virginia Agile: SCRUM"
+  },
+  {
+    "objectID": "mindset.html",
+    "href": "mindset.html",
+    "title": "Mindset",
+    "section": "",
+    "text": "Herramientas útiles para llegar al objetivo de este curso\n\n\nReconociendo dónde estoy y a dónde quiero llegar\n\nEl objetivo principal es entender el problema para usar la herramienta adecuada para su solucion. ejemplo:\n¿podemos comer sopa con un tenedor? -Naturalmente por poder se puede, pero ¿es adecuado? obviamente la respuesta es No existe la herramienta cuchara que es la indicada para hacer esta acción.\nLa misma situacion ocurre a la hora de programar ,enfrentaremos diversas maneras de resolver nuestros problemas y debemos serr capaces de saber elegir que herramienta(de procedimiento) utilizar para el problema que estamos enfrentando.\n\n\n\nSopa\n\n\n\nLeyes básicas para no caer en el pozo…\n\n\n\ncoffe\n\n\nKeep Calm and walk 1% (reflxiona, no caigas al pozo,identifica,PAVOLANDS)\nPlanifica tu energia (mucha energia= programaMedia energia = planifica tu dia poca energia=documeta. )\n\n\n\nTable 1: Baja o alta Energia\n\n\n\n\n\n\n\n\n\n\n\nTag\nPorpuse\nDescription\nEnergy\n\n\n\n\nMindset\ncrecer\nvoy bien , me adaptpo , me ciño al plan\nmedia\n\n\nEjecutar\nmicroProgramación\nMooc\nbaja\n\n\nArchitec\nmacroProgramacion\numl ,pages,dominios\nalta\n\n\nLearning\nMomento ajá\ninstante que se entiende el problema\nalta\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nExplicación del uso de energias en Scrum\n\n\n\n\nAnalizando las tareas a realizar:\npara reconocer lo que nos supondra la ejecución de nuestras diferentes tareas utilizaremos la herramienta métricas  donde vamos a medir según:\nTipologia del problema\nSimple : tarea que utiliza poca cantadidad de energía aqui entendemos que podemos ejecutar.\nComplicado : tarea que nos implica pensar y gestionar antes de poder ejecutar.\ncomplejo : tarea que require bastantes iteraciones.\nRequerimiento de energía\nAlta energia: Momento del dia que puedo ser capaz de detectar pavolands o posibles caidas al pozo. Media energia: momento del dia que utilizo para organizar mis rutinas es decir pienso algo que ya existe, solo lo organizo. Baja energia: momento del dia que no pienso solo ejecuto.\n\n\n\nAnalizando Tareas\n\n\n\n\nReconociendo mi ser\n\n¿que me hace fallar?\n¿Cómo funciono yo?\n¿Cuando estoy mas productiva ?\n¿Cuál es mi Path?\n\nAhora bien ya sabemos reconocer el tipo y la cantidad de energia que se necesita para llevar a cabo nuestras tareas , ahora toca reconocernos y eso se logra bajo las 3 preguntas que se encuentran arriba?\n\n\n\n¿Por qué fallamos?\n\n\nEl detallle esta en que nos dejamos llevar por la euforia del momento es decir una persona que no ha corrido una marathon no puede decidir que en 3 dias de entreno va a estar listo para hacerlo.\nla ilusion del conocimiento\n\n\nManera básica de aprender\nPicnic Profundizar Consolidar //poner imagen\n\n\n\n¿Por qué fallamos?"
+  },
+  {
+    "objectID": "java.html",
+    "href": "java.html",
+    "title": "Java",
+    "section": "",
+    "text": "Java es un lenguaje de programación orientado a objetos conocido por su portabilidad, seguridad.\nJSE : Java Standart Edition. JDK : Java development Kit. JRE : Java Runtime Enviroment. JEE : Java enterprise edition."
+  },
+  {
+    "objectID": "java.html#ahora-veamos-cómo-se-conectan",
+    "href": "java.html#ahora-veamos-cómo-se-conectan",
+    "title": "Java",
+    "section": "Ahora, veamos cómo se conectan:",
+    "text": "Ahora, veamos cómo se conectan:\nConstructor y Atributos: El constructor se encarga de inicializar los atributos de un objeto cuando se crea una instancia de la clase. Por ejemplo, si tienes un constructor en la clase “Coche”, este puede aceptar parámetros como el color y la velocidad inicial, y asignar esos valores a los atributos correspondientes.\n\n\nConstructor.java\n\npublic class Coche {\n    private String color;\n    private int velocidad;\n\n    // Constructor\n    public Coche(String color, int velocidadInicial) {\n        this.color = color;\n        this.velocidad = velocidadInicial;\n    }\n}\n\nMétodos y Atributos: Los métodos pueden acceder a los atributos de la clase para realizar operaciones o devolver resultados. Por ejemplo, podrías tener un método para acelerar el coche, que modifica el atributo de velocidad.\npublic class Coche {\n    private String color;\n    private int velocidad;\n\n    // Constructor\n    public Coche(String color, int velocidadInicial) {\n        this.color = color;\n        this.velocidad = velocidadInicial;\n    }\n\n    // Método para acelerar el coche\n    public void acelerar(int aumento) {º\n        this.velocidad += aumento;\n    }\n}\nMétodos y Constructor: Los métodos también pueden llamar al constructor para crear nuevas instancias de la clase. Esto puede ser útil, por ejemplo, si necesitas inicializar un objeto de una manera específica antes de realizar ciertas operaciones.\npublic class Ejemplo {\n    public static void main(String[] args) {\n        // Crear un objeto Coche utilizando el constructor\n        Coche miCoche = new Coche(\"Rojo\", 0);\n\n        // Llamar a un método que utiliza los atributos inicializados por el constructor\n        miCoche.acelerar(10);\n    }\n}"
+  },
+  {
+    "objectID": "java.html#fracturas-para-java",
+    "href": "java.html#fracturas-para-java",
+    "title": "Java",
+    "section": "4 fracturas para java",
+    "text": "4 fracturas para java\n\nES\nEE\nSpringBoot\nQuartz"
+  },
+  {
+    "objectID": "java.html#arquitecturas",
+    "href": "java.html#arquitecturas",
+    "title": "Java",
+    "section": "Arquitecturas",
+    "text": "Arquitecturas\n\n\n\n\n\n\nFigure 1: Arquitectura\n\n\n\nPagina web  El front le hace una peticion al servidor a travez de una url, llega al servidor este le hace la peticion a BBDD y esta a su vez le devuelve en formato json. Figure 1."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJava\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMichWebStudies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMindset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProyecto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReact\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "linux.html",
+    "href": "linux.html",
+    "title": "Linux",
+    "section": "",
+    "text": "construction\n\n\n\n\n\nconstruction"
+  },
+  {
+    "objectID": "react.html",
+    "href": "react.html",
+    "title": "React",
+    "section": "",
+    "text": "React.js es una biblioteca JavaScript utilizada para construir interfaces de usuario.\nGestor de dependencias : Npm  Css : Estilo  Js : Dinamica"
+  },
+  {
+    "objectID": "react.html#conceptos-básicosde-react",
+    "href": "react.html#conceptos-básicosde-react",
+    "title": "React",
+    "section": "Conceptos Básicosde React…",
+    "text": "Conceptos Básicosde React…\nComponentes : es un bloque de construccion reutilizable que define como se comporta una parte de la interfaz.  Estado (State) : El estado representa la informacion dinamica ,gestiona cambios en la interfaz en respuesta a eventos. Hooks : funciones que controlan elestado de los componentes. Ciclo de vida del componente : definen las fases porlas que pasara un componente. Propiedades (props): datos que pasa de un componente padre a un componente hijo para configurar su compo¡rtamiento o apariencia. Jsx : Sintaxis que permite la utilizacion de javaScript y html para la creacion de componentes. Renderizar :Proceso que permite visualizar el estado de la aplicación  Eventos : acciones del usuarioque desencadenan actualizaciones en el estado. Inmutabilidad : evita modificar datos originales. Virtual DOM : Donde se realiza la comparacion de los estados de los componetes para lanzar la renderización que toca. Ciclo delRender : proceso de creacion y actualización de la interfaz de usuario. Objeto Literal : se refiere a un objeto de JavaScript se utiliza para pasar propiedades. Json : formato ligero de intercambio de datos.\n// imagen\nImports : Export default function Menu(){ : se crea el componente. Bussines logic : parte del codigo que implementa reglas especificas y proceso. &lt;&gt; &lt;/&gt; : Fragments  Return : comienza el rederizado , lo que se va a mostrar en pantalla.\n\n\n\n\n\n\nImportant\n\n\n\nla manera de crear un project React es la siguiente:  npx create -react-app my app"
+  }
+]
