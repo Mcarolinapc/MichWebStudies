@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "MichWebStudies"    
+  navbar:    
+    left:
+    - href: index.qmd
+      text: Home
+    - about.qmd
+    - java.qmd
+    - JavaProject.qmd
+    - mindset.qmd
+    - react.qmd
+    - linux.qmd
+  
+
+
+format:
+  html:
+    theme: vapors
+    css: styles.css
+    toc: true
+    
+
+
+

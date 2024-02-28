@@ -1,0 +1,49 @@
+---
+title: "React"
+---
+### ¿qúe es React?
+
+
+React.js es una biblioteca JavaScript utilizada para construir interfaces de usuario.
+
+**Gestor de dependencias :** Npm <br>
+**Css :** Estilo <br>
+**Js :** Dinamica <br>
+
+
+
+## Conceptos Básicosde React...
+
+**Componentes :** es un bloque de construccion reutilizable que define como se comporta una parte de la interfaz. <br>
+**Estado (State)** : El estado representa la informacion dinamica ,gestiona cambios en la interfaz en respuesta a eventos.<br>
+**Hooks :** funciones que controlan elestado de los componentes.<br>
+**Ciclo de vida del componente :** definen las fases porlas que pasara un componente.<br>
+**Propiedades (props):** datos que pasa de un componente padre a un 
+componente hijo para configurar su compo¡rtamiento o apariencia.<br>
+**Jsx :** Sintaxis que permite la utilizacion de javaScript y html para la creacion de componentes.<br>
+**Renderizar :**Proceso que permite visualizar el estado de la aplicación <br>
+**Eventos :** acciones del usuarioque desencadenan actualizaciones en el estado.<br>
+**Inmutabilidad :** evita modificar datos originales.
+**Virtual DOM :** Donde se realiza la comparacion de los estados de los componetes para lanzar la renderización que toca.
+**Ciclo delRender :** proceso de creacion y actualización de la interfaz de usuario.
+**Objeto Literal :** se refiere a un objeto de JavaScript se utiliza para pasar propiedades.
+**Json :** formato ligero  de intercambio de datos.
+
+
+
+
+
+
+// imagen
+
+**Imports :**
+**Export default function Menu(){ :** se crea el componente.<br>
+**Bussines logic :** parte del codigo que implementa reglas especificas y proceso.<br>
+**<> </> :** Fragments <br>
+**Return :** comienza el rederizado , lo que se va a mostrar en pantalla.
+
+
+::: callout-important
+ la manera de crear un project React es la siguiente: <br>
+ npx create -react-app my app
+:::

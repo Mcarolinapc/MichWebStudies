@@ -1,0 +1,5 @@
+---
+title: "Linux"
+---
+
+![construction ](img/contruccion.png){.lightbox}

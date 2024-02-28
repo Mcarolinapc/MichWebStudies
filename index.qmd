@@ -1,0 +1,54 @@
+---
+title: "MichWebStudies"
+---
+
+
+<h2> Desarrollo de aplicaciones con tecnologia web</h2>
+<h2> Semana 1: <b>Mindset & Path & Tools</b></h3>
+#### **Objetivo core del curso** :
+
+Crear conocimiento que se pueda conectar a mis conocimientos base.
+
+
+
+
+![conectar](img/conectar.png)
+
+# Principales herramientas :
+
+-  Java/Springboot.
+-  React/Js/Jsx.
+-  Api Rest.
+-  BBDD/relacionales/no relacionales.
+-  Linux/VM.
+-  Devops/Quarto/Git.
+
+# Reconociendo Ecosistema de trabajo...
+
+::: {#tbl-EcoSystem}
+
+|Software core tools | developments Tool | DeveloperTools | DeVops     |
+|--------------------|-------------------|----------------|------------|
+|Java SE |  Maven: pom.xml  |  IDE: IntelliJ IDEA 2023.3.3 (Community Edition)| phase: Sand-Box|
+|JDK open JDK21| Lombok, JUnit 4.11/5, <br> JavaFaker | (Community Edition)<br>Doc: Quarto markdown<br>Version Control: git & gitHub <br> mermaid UML|Linu213 Virginia <br>Agile: SCRUM
+
+: Ecosistema de trabajo Java
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
