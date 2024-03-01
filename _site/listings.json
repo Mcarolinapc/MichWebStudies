@@ -10,16 +10,5 @@
       "/react.html",
       "/devops.html"
     ]
-  },
-  {
-    "listing": "/list.html",
-    "items": [
-      "/about.html",
-      "/java.html",
-      "/index.html",
-      "/mindset.html",
-      "/devops.html",
-      "/react.html"
-    ]
   }
 ]
