@@ -5,16 +5,46 @@ website:
   title: "MichWebStudies"    
   navbar:    
     left:
-    - href: index.qmd
-      text: Home
-    - about.qmd
-    - java.qmd
-    - JavaProject.qmd
-    - mindset.qmd
-    - react.qmd
-    - linux.qmd
+    - text: "Home"
+      file: index.qmd 
+    - text: "React"
+      file: react.qmd
+    - text: "Mindset"
+      file: mindset.qmd
+    - text: "Linux"
+      file: linux.qmd
+    - text: "DeVops"
+      file: devops.qmd
+    - text: "About"
+      file: about.qmd 
+
+    - sidebar:java
+  sidebar:
+  - id: java
+    title: "Java"
+    style: "docked"
+    background: light
+    collapse-level: 2
+    contents: 
+      # navigation items
+      - java.qmd
+      - JavaProject.qmd
+
   
 
+  - id: react
+    title: "React"
+    contents: 
+      # navigation items
+      - react.qmd
+      - JavaProject.qmd    
+      
+
+
+    
+
+ 
+   
 
 format:
   html:
@@ -22,6 +52,3 @@ format:
     css: styles.css
     toc: true
     
-
-
-
