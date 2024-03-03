@@ -2,13 +2,13 @@
   {
     "listing": "/about.html",
     "items": [
+      "/devops.html",
       "/java.html",
+      "/JavaProject.html",
       "/linux.html",
       "/index.html",
       "/mindset.html",
-      "/JavaProject.html",
-      "/react.html",
-      "/devops.html"
+      "/react.html"
     ]
   }
 ]
