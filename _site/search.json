@@ -18,35 +18,47 @@
     "href": "java.html",
     "title": "Java",
     "section": "",
-    "text": "Java es un lenguaje de programación orientado a objetos conocido por su portabilidad, seguridad.\nJSE : Java Standart Edition. JDK : Java development Kit. JRE : Java Runtime Enviroment. JEE : Java enterprise edition."
+    "text": "Java es un lenguaje de programación orientado a objetos conocido por su portabilidad, seguridad.\nJSE : Java Standart Edition. JDK : Java development Kit. JRE : Java Runtime Enviroment. JEE : Java enterprise edition.",
+    "crumbs": [
+      "Java"
+    ]
   },
   {
     "objectID": "java.html#ahora-veamos-cómo-se-conectan",
     "href": "java.html#ahora-veamos-cómo-se-conectan",
     "title": "Java",
     "section": "Ahora, veamos cómo se conectan:",
-    "text": "Ahora, veamos cómo se conectan:\nConstructor y Atributos: El constructor se encarga de inicializar los atributos de un objeto cuando se crea una instancia de la clase. Por ejemplo, si tienes un constructor en la clase “Coche”, este puede aceptar parámetros como el color y la velocidad inicial, y asignar esos valores a los atributos correspondientes.\n\n\nConstructor.java\n\npublic class Coche {\n    private String color;\n    private int velocidad;\n\n    // Constructor\n    public Coche(String color, int velocidadInicial) {\n        this.color = color;\n        this.velocidad = velocidadInicial;\n    }\n}\n\nMétodos y Atributos: Los métodos pueden acceder a los atributos de la clase para realizar operaciones o devolver resultados. Por ejemplo, podrías tener un método para acelerar el coche, que modifica el atributo de velocidad.\npublic class Coche {\n    private String color;\n    private int velocidad;\n\n    // Constructor\n    public Coche(String color, int velocidadInicial) {\n        this.color = color;\n        this.velocidad = velocidadInicial;\n    }\n\n    // Método para acelerar el coche\n    public void acelerar(int aumento) {º\n        this.velocidad += aumento;\n    }\n}\nMétodos y Constructor: Los métodos también pueden llamar al constructor para crear nuevas instancias de la clase. Esto puede ser útil, por ejemplo, si necesitas inicializar un objeto de una manera específica antes de realizar ciertas operaciones.\npublic class Ejemplo {\n    public static void main(String[] args) {\n        // Crear un objeto Coche utilizando el constructor\n        Coche miCoche = new Coche(\"Rojo\", 0);\n\n        // Llamar a un método que utiliza los atributos inicializados por el constructor\n        miCoche.acelerar(10);\n    }\n}"
+    "text": "Ahora, veamos cómo se conectan:\nConstructor y Atributos: El constructor se encarga de inicializar los atributos de un objeto cuando se crea una instancia de la clase. Por ejemplo, si tienes un constructor en la clase “Coche”, este puede aceptar parámetros como el color y la velocidad inicial, y asignar esos valores a los atributos correspondientes.\n\n\nConstructor.java\n\npublic class Coche {\n    private String color;\n    private int velocidad;\n\n    // Constructor\n    public Coche(String color, int velocidadInicial) {\n        this.color = color;\n        this.velocidad = velocidadInicial;\n    }\n}\n\nMétodos y Atributos: Los métodos pueden acceder a los atributos de la clase para realizar operaciones o devolver resultados. Por ejemplo, podrías tener un método para acelerar el coche, que modifica el atributo de velocidad.\npublic class Coche {\n    private String color;\n    private int velocidad;\n\n    // Constructor\n    public Coche(String color, int velocidadInicial) {\n        this.color = color;\n        this.velocidad = velocidadInicial;\n    }\n\n    // Método para acelerar el coche\n    public void acelerar(int aumento) {º\n        this.velocidad += aumento;\n    }\n}\nMétodos y Constructor: Los métodos también pueden llamar al constructor para crear nuevas instancias de la clase. Esto puede ser útil, por ejemplo, si necesitas inicializar un objeto de una manera específica antes de realizar ciertas operaciones.\npublic class Ejemplo {\n    public static void main(String[] args) {\n        // Crear un objeto Coche utilizando el constructor\n        Coche miCoche = new Coche(\"Rojo\", 0);\n\n        // Llamar a un método que utiliza los atributos inicializados por el constructor\n        miCoche.acelerar(10);\n    }\n}",
+    "crumbs": [
+      "Java"
+    ]
   },
   {
     "objectID": "java.html#fracturas-para-java",
     "href": "java.html#fracturas-para-java",
     "title": "Java",
     "section": "4 fracturas para java",
-    "text": "4 fracturas para java\n\nES\nEE\nSpringBoot\nQuartz"
+    "text": "4 fracturas para java\n\nES\nEE\nSpringBoot\nQuartz",
+    "crumbs": [
+      "Java"
+    ]
   },
   {
     "objectID": "java.html#arquitecturas",
     "href": "java.html#arquitecturas",
     "title": "Java",
     "section": "Arquitecturas",
-    "text": "Arquitecturas\n\n\n\n\n\n\nFigure 1: Arquitectura\n\n\n\nPagina web  El front le hace una peticion al servidor a travez de una url, llega al servidor este le hace la peticion a BBDD y esta a su vez le devuelve en formato json. Figure 1."
+    "text": "Arquitecturas\n\n\n\n\n\n\nFigure 1: Arquitectura\n\n\n\nPagina web  El front le hace una peticion al servidor a travez de una url, llega al servidor este le hace la peticion a BBDD y esta a su vez le devuelve en formato json. Figure 1.",
+    "crumbs": [
+      "Java"
+    ]
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJava\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMichWebStudies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMindset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProyecto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReact\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "About this site\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJava\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJavaProject\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinux\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMichWebStudies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMindset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReact\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "linux.html",
@@ -60,13 +72,29 @@
     "href": "react.html",
     "title": "React",
     "section": "",
-    "text": "React.js es una biblioteca JavaScript utilizada para construir interfaces de usuario.\nGestor de dependencias : Npm  Css : Estilo  Js : Dinamica"
+    "text": "React.js es una biblioteca JavaScript utilizada para construir interfaces de usuario.\nGestor de dependencias : Npm  Css : Estilo  Js : Dinamica",
+    "crumbs": [
+      "React"
+    ]
   },
   {
     "objectID": "react.html#conceptos-básicosde-react",
     "href": "react.html#conceptos-básicosde-react",
     "title": "React",
     "section": "Conceptos Básicosde React…",
-    "text": "Conceptos Básicosde React…\nComponentes : es un bloque de construccion reutilizable que define como se comporta una parte de la interfaz.  Estado (State) : El estado representa la informacion dinamica ,gestiona cambios en la interfaz en respuesta a eventos. Hooks : funciones que controlan elestado de los componentes. Ciclo de vida del componente : definen las fases porlas que pasara un componente. Propiedades (props): datos que pasa de un componente padre a un componente hijo para configurar su compo¡rtamiento o apariencia. Jsx : Sintaxis que permite la utilizacion de javaScript y html para la creacion de componentes. Renderizar :Proceso que permite visualizar el estado de la aplicación  Eventos : acciones del usuarioque desencadenan actualizaciones en el estado. Inmutabilidad : evita modificar datos originales. Virtual DOM : Donde se realiza la comparacion de los estados de los componetes para lanzar la renderización que toca. Ciclo delRender : proceso de creacion y actualización de la interfaz de usuario. Objeto Literal : se refiere a un objeto de JavaScript se utiliza para pasar propiedades. Json : formato ligero de intercambio de datos.\n// imagen\nImports : Export default function Menu(){ : se crea el componente. Bussines logic : parte del codigo que implementa reglas especificas y proceso. &lt;&gt; &lt;/&gt; : Fragments  Return : comienza el rederizado , lo que se va a mostrar en pantalla.\n\n\n\n\n\n\nImportant\n\n\n\nla manera de crear un project React es la siguiente:  npx create -react-app my app"
+    "text": "Conceptos Básicosde React…\nComponentes : es un bloque de construccion reutilizable que define como se comporta una parte de la interfaz.  Estado (State) : El estado representa la informacion dinamica ,gestiona cambios en la interfaz en respuesta a eventos. Hooks : funciones que controlan elestado de los componentes. Ciclo de vida del componente : definen las fases porlas que pasara un componente. Propiedades (props): datos que pasa de un componente padre a un componente hijo para configurar su compo¡rtamiento o apariencia. Jsx : Sintaxis que permite la utilizacion de javaScript y html para la creacion de componentes. Renderizar :Proceso que permite visualizar el estado de la aplicación  Eventos : acciones del usuarioque desencadenan actualizaciones en el estado. Inmutabilidad : evita modificar datos originales. Virtual DOM : Donde se realiza la comparacion de los estados de los componetes para lanzar la renderización que toca. Ciclo delRender : proceso de creacion y actualización de la interfaz de usuario. Objeto Literal : se refiere a un objeto de JavaScript se utiliza para pasar propiedades. Json : formato ligero de intercambio de datos. Triguer: siempre va a nivel del render y es el que llama a las funciones o el hook.",
+    "crumbs": [
+      "React"
+    ]
+  },
+  {
+    "objectID": "react.html#describiendola-ui",
+    "href": "react.html#describiendola-ui",
+    "title": "React",
+    "section": "Describiendola UI : ",
+    "text": "Describiendola UI : \nReact se utiliza para renderizar interfaces de usuario (UI por sus siglas en inglés). La UI se construye a partir de pequeñas unidades como botones, texto e imágenes.\n\n\n\n\n\n\nImportant\n\n\n\nla manera de crear un project React es la siguiente:  npx create -react-app my app\n\n\n\nUn primer Componente \n¿Que es un componente? Es una funcion de JavaScript a la que puedes agregar marcado. Un componente se considera los cimientos sobre los que construyes interfaces de usuario.\n\n\nApp.js\n\n\nexport default function Profile() {\n  return (\n    &lt;img\n      src=\"https://i.imgur.com/MK3eW3Am.jpg\"\n      alt=\"Katherine Johnson\"\n    /&gt;\n  )\n}\n\n\n\n\n\n\n\nWarning\n\n\n\n¡Los componentes de React son funciones regulares de JavaScript, pero sus nombres deben comenzar con letra mayúscula o no funcionarán!\n\n\nPaso 1: Exporta el componente El prefijo export default es parte de la sintaxis estándar de Javascript (no es específico de React). Te permite marcar la función principal en un archivo para que luego puedas importarlas en otros archivos. (¡Más sobre importar en Importar y exportar componentes!).\nPaso 2: Define la función Con function Profile() { } defines una función con el nombre Profile.\nPaso 3: Agrega marcado El componente devuelve una etiqueta  con atributos src y alt.  se escribe como en HTML, ¡pero en realidad es JavaScript por detrás! Esta sintaxis se llama JSX \nLas sentencias return se pueden escribir todo en una línea, como en este componente:\n\nreturn &lt;img src=\"https://i.imgur.com/MK3eW3As.jpg\" alt=\"Katherine Johnson\" /&gt;;\nPero si tu marcado no está todo en la misma línea que la palabra clave return, debes ponerlo dentro de paréntesis como en este ejemplo:\nreturn (\n  &lt;div&gt;\n    &lt;img src=\"https://i.imgur.com/MK3eW3As.jpg\" alt=\"Katherine Johnson\" /&gt;\n  &lt;/div&gt;\n);\n\n\n\n\n\n\nCaution\n\n\n\n¡Sin paréntesis, todo el código que está en las líneas posteriores al return serán ignoradas!\n\n\n\n\nEstructura de un componente\n\n\n\nComponente\n\n\nexplicando la estructura:\nImports : aqui se importaran los componentes que se vayan a utilizar Export default function Menu(){ : se crea el componente. Const[…] : se crea el hook Bussines logic : parte del codigo que implementa reglas especificas y proceso  Return : comienza el rederizado , lo que se va a mostrar en pantalla. &lt;&gt; &lt;/&gt; : Fragments aqui ira encapsulado el render  triguer : llamara a la funcion.\n\n\nCiclo de render\ntodo comenzará con el triguer que hara lallamada al hook o funcion, aquise renderizará (el motorde react hara las comparaciones con el estado inicial que tiene en memoria DomVirtual) y finalmente el hook conecta la logica de negocio con el Dom (pinta).\nHay que tener en cuenta que React es como un multiverso es decir funciona como en lineas temporales , ya que no es lo mismo que pinta en el dom a lo que renderiza en memoria, es decir pintará rapidamente en pantalla los cambios pero en memoria esperará hacer el cambio la siguiente comparación.\n\n\n\n\n\n\nTip\n\n\n\nenlace de interes CDA",
+    "crumbs": [
+      "React"
+    ]
   }
 ]

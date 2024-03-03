@@ -96,29 +96,40 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./java.html"> 
-<span class="menu-text">Java</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./JavaProject.html"> 
-<span class="menu-text">Proyecto</span></a>
+    <a class="nav-link" href="./react.html"> 
+<span class="menu-text">React</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./mindset.html" aria-current="page"> 
 <span class="menu-text">Mindset</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./react.html"> 
-<span class="menu-text">React</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./linux.html"> 
 <span class="menu-text">Linux</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./devops.html"> 
+<span class="menu-text">DeVops</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-java" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Java</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-java">    
+        <li>
+    <a class="dropdown-item" href="./java.html">
+ <span class="dropdown-text">Java</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./JavaProject.html">
+ <span class="dropdown-text">JavaProject</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -682,7 +693,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

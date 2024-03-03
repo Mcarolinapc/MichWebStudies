@@ -23,27 +23,98 @@ componente hijo para configurar su compo¡rtamiento o apariencia.<br>
 **Jsx :** Sintaxis que permite la utilizacion de javaScript y html para la creacion de componentes.<br>
 **Renderizar :**Proceso que permite visualizar el estado de la aplicación <br>
 **Eventos :** acciones del usuarioque desencadenan actualizaciones en el estado.<br>
-**Inmutabilidad :** evita modificar datos originales.
+**Inmutabilidad :** evita modificar datos originales.<br>
 **Virtual DOM :** Donde se realiza la comparacion de los estados de los componetes para lanzar la renderización que toca.
-**Ciclo delRender :** proceso de creacion y actualización de la interfaz de usuario.
-**Objeto Literal :** se refiere a un objeto de JavaScript se utiliza para pasar propiedades.
-**Json :** formato ligero  de intercambio de datos.
+**Ciclo delRender :** proceso de creacion y actualización de la interfaz de usuario.<br>
+**Objeto Literal :** se refiere a un objeto de JavaScript se utiliza para pasar propiedades.<br>
+**Json :** formato ligero  de intercambio de datos.<br>
+**Triguer:** siempre va a nivel del render y es el que llama a las funciones  o el hook.<br>
 
-
-
-
-
-
-// imagen
-
-**Imports :**
-**Export default function Menu(){ :** se crea el componente.<br>
-**Bussines logic :** parte del codigo que implementa reglas especificas y proceso.<br>
-**<> </> :** Fragments <br>
-**Return :** comienza el rederizado , lo que se va a mostrar en pantalla.
-
+## Describiendola UI  : <br>
+React se utiliza para renderizar interfaces de usuario (UI por sus siglas en inglés). La UI se construye a partir de pequeñas unidades como botones, texto e imágenes.
 
 ::: callout-important
  la manera de crear un project React es la siguiente: <br>
  npx create -react-app my app
+:::
+
+#### Un primer Componente <br>
+
+¿Que es un componente?<br>
+
+Es una funcion de JavaScript a la que puedes agregar marcado.
+Un componente se considera los cimientos sobre los que construyes interfaces de usuario.
+
+``` {.js filename="App.js"}
+
+export default function Profile() {
+  return (
+    <img
+      src="https://i.imgur.com/MK3eW3Am.jpg"
+      alt="Katherine Johnson"
+    />
+  )
+}
+```
+::: callout-warning
+¡Los componentes de React son funciones regulares de JavaScript, pero sus nombres deben comenzar con letra mayúscula o no funcionarán!
+:::
+
+Paso 1: Exporta el componente 
+El prefijo export default es parte de la sintaxis estándar de Javascript (no es específico de React). Te permite marcar la función principal en un archivo para que luego puedas importarlas en otros archivos. (¡Más sobre importar en Importar y exportar componentes!).
+
+Paso 2: Define la función 
+Con function Profile() { } defines una función con el nombre Profile.
+
+Paso 3: Agrega marcado El componente devuelve una etiqueta <img /> con atributos src y alt. <img /> se escribe como en HTML, ¡pero en realidad es JavaScript por detrás! Esta sintaxis se llama JSX <br>
+
+Las sentencias return se pueden escribir todo en una línea, como en este componente:
+```js
+
+return <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />;
+
+```
+
+Pero si tu marcado no está todo en la misma línea que la palabra clave return, debes ponerlo dentro de paréntesis como en este ejemplo:
+
+```js
+return (
+  <div>
+    <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />
+  </div>
+);
+
+```
+::: {.callout-caution}
+¡Sin paréntesis, todo el código que está en las líneas posteriores al return serán ignoradas!
+:::
+
+### Estructura  de un componente 
+
+![Componente](img/componente.png)
+
+explicando la estructura:
+
+**Imports :** aqui se importaran los componentes que se vayan a utilizar<br>
+**Export default function Menu(){ :** se crea el componente.<br>
+**Const[...] :** se crea el hook
+**Bussines logic :** parte del codigo que implementa reglas especificas y proceso <br>
+**Return :** comienza el rederizado , lo que se va a mostrar en pantalla.<br>
+**<> </> :** Fragments aqui ira encapsulado el render <br>
+**triguer :** llamara a la funcion.
+
+### Ciclo de render 
+
+todo comenzará con el triguer que hara lallamada al hook o funcion, aquise renderizará (el motorde react hara las comparaciones con el estado inicial que tiene en memoria DomVirtual) y finalmente el hook conecta la logica de negocio con el Dom (pinta).
+
+***Hay que tener en cuenta que React es como un multiverso es decir funciona como en lineas temporales , ya que no es lo mismo que pinta en el dom a lo que renderiza en memoria, es decir pintará rapidamente en pantalla los cambios pero en memoria esperará hacer el cambio la siguiente comparación.***
+
+
+
+
+
+
+
+::: {.callout-tip}
+enlace de interes [CDA](https://www.cdainfo.com/es/noticias/179-react-la-herramienta-mas-usada-para-crear-interfaces)
 :::
