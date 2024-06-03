@@ -1,4 +1,64 @@
 ---
-title: JavaProject
+title: ServerProject
 ---
 ![construction ](img/contruccion.png){.lightbox}
+
+
+
+Se solicita la creacion de una ecommerce dedicada a la venta de productos naturales y videos talleres.
+
+se comienza por las entidades que son necesarias para poner en marcha el project, dando como resultado un primer diagrama.
+
+
+```{mermaid}
+classDiagram
+class Cliente {
+    -id: String
+    -name: String
+    -lastName: String
+    -direction: String
+    -mail: String
+    -phone: int
+    
+}
+
+class Pedido {
+
+-id: String
+-idTipoPedido
+
+}
+
+class DetallePedido {
+    -id: String
+    -idPedido: String
+    -idTipoProducto: String
+    -Quantity: int
+    -Price : double
+
+}
+
+class Producto {
+-id: String
+-producto: String
+-description: String
+-quantity: int
+-price: double
+
+}
+class Taller{
+    -id: String
+    -link: String
+    -Description: String
+    -Price: double
+}
+
+Cliente --> Pedido
+Pedido --> Cliente
+Pedido --> DetallePedido
+DetallePedido --> Producto
+Producto --> Taller
+Taller --> Producto
+
+
+```

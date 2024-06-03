@@ -1,0 +1,459 @@
+# ¿qúe es Springboot?
+
+Herramienta que acelera y simplifica el desarrollo de microservivios  y apps web.
+
+-A grandes rasgos esun framework de bakend.<br>
+-Es de codigo abierto.<br>
+-Se ejecuta en la maquina virtual dee java(JVM).<br>
+
+Hablar de SpringBoot es referirse a inyección de dependencias<br>
+
+## Carácteristicas principales de Springboot:
+
+**-Configuración automática:**  las aplicaciones se inicializan con dependencias  predefinidas, sin necesidad de añadirlas manualmente.<br>
+
+**-enfoque de configuración obstinado:** en funcion de la necesidad del proyecto springBoot elige que paquetes y valores predeterminados utilizar.<br>
+
+**-Capacidad de crear app autónomas:** no dependen de un servidor web externo ya que Spring como tal integra un servidor web como  Tomcat o Netty.<br>
+
+
+
+
+
+
+### ¿pero a qué nos referimos con inyección de dependencias y por qué es tan importante en SpringBoot? <br>
+
+La inyección de dependecias hace referencia  a un pattern de programación que  permite acceder a objetos  por medio de una variale de referencia, conocidas como anotaciones.
+
+//imagen dibuje señora
+
+### ¿....y que son las anotaciones ¿por qué son importantes? 
+
+Las anotaciones simplifican el proceso de  desarrollo al proporcionar una forma declarativa  de configurar y administrar  varios aspectos de una a aplicacion<br>
+
+### Anotaciones de configuración<br>
+
+**@SpringBootApplication:** se utiliza para marcar la clase principal de un aplicación.
+
+
+``` {.java filename="main.java"}
+package com.NaturaLove.ProductNaturaLove.Go;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+
+public class
+TiendaNaturaLoveApplication {
+
+	public static void main(String[] args) {
+
+		SpringApplication.run(TiendaNaturaLoveApplication.class, args);
+	}
+}
+
+```
+**@Configuration:**
+
+
+
+``` {.java filename="main.java"}
+@Configuration
+public class MyConfiguration {
+    @Bean
+    public MyBean myBean() {
+        return new MyBean();
+    }
+}
+```
+
+### Anotaciones de componentes
+
+**@Component :**Indica que la clase es un componente Spring y el contenedor Spring administrará su ciclo de vida.
+
+``` {.java filename="Componente.java"}
+
+@Component
+public class MyComponent {
+
+}
+
+```
+
+**@Service, @Repository,@Controller:** <br>
+Estas son especializaciones @Component y se utilizan para indicar tipos específicos de componentes administrados por Spring: servicios, repositorios y controladores, respectivamente.
+
+``` {.java filename="ComponentesEspecificos.java"}
+
+@Service
+public class MyService {
+    // Service implementation
+}
+
+@Repository
+public class MyRepository {
+    // Repository implementation
+}
+
+@Controller
+public class MyController {
+    // Controller implementation
+}
+
+```
+
+### Anotaciones de inyección de dependencia
+
+**@Autowired:**
+Esta anotación se utiliza para inyectar automáticamente una dependencia en los componentes gestionados por el contenedor de Spring.
+
+
+``` {.java filename="InyeccionDeDependencia.java"}
+
+
+@RestController
+public class ClienteRestController {
+
+    @Autowired
+    CustomerRepository customerRepository;
+    @Autowired
+    ClienteService clienteService;
+
+    @RequestMapping("/populatec")
+    public Iterable<Cliente> populateCliente() {
+
+        clienteService.populate();
+
+        return  customerRepository.findAll();
+
+    }
+```
+
+### Anotaciones de acceso a datos
+
+**@Entity, @Table,@Column:**
+Estas anotaciones se utilizan para definir entidades JPA, especificando detalles de tablas y columnas.
+
+
+```  {.java filename="Acceso.java"}
+
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "username")
+    private String username;
+}
+```
+
+**@Repository:**se utiliza para indicar que una clase es un repositorio de Spring Data.
+
+```  {.java filename="Data.java"}
+public interface CustomerRepository extends CrudRepository<Cliente,String> {
+
+}
+```
+
+
+
+### Anotaciones web
+
+**@RestController,@webController:**
+Anota una clase que define un controlador REST en Spring MVC.
+Los métodos de la clase manejarán solicitudes HTTP y devolverán objetos como respuesta<br>
+
+``` {.java filename="RestController.java"}
+
+@RestController
+public class ClienteRestController {
+
+}
+
+```
+
+**@RequestMapping, @GetMapping,@PostMapping:**
+Estas anotaciones se utilizan para asignar solicitudes HTTP a métodos de controlador específicos.
+
+``` {.java filename="Especificos.java"}
+
+
+@RestController
+@RequestMapping("/api/greetings")
+public class GreetingController {
+    
+    @GetMapping
+    public String getGreeting() {
+        return "Hello, World!";
+    }
+
+    @PostMapping
+    public String postGreeting() {
+        return "Greeting posted!";
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

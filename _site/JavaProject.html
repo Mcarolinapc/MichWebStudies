@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MichWebStudies - JavaProject</title>
+<title>MichWebStudies - ServerProject</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -126,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./JavaProject.html">
- <span class="dropdown-text">JavaProject</span></a>
+ <span class="dropdown-text">ServerProject</span></a>
   </li>  
     </ul>
   </li>
@@ -141,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./JavaProject.html">JavaProject</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./JavaProject.html">ServerProject</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -162,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./JavaProject.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">JavaProject</span></a>
+ <span class="menu-text">ServerProject</span></a>
   </div>
 </li>
     </ul>
@@ -178,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">JavaProject</h1>
+<h1 class="title">ServerProject</h1>
 </div>
 
 
@@ -197,9 +200,72 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/contruccion.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="construction"><img src="img/contruccion.png" class="img-fluid figure-img" alt="construction"></a></p>
+<p><a href="img/contruccion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="construction"><img src="img/contruccion.png" class="img-fluid figure-img" alt="construction"></a></p>
 <figcaption>construction</figcaption>
 </figure>
+</div>
+<p>Se solicita la creacion de una ecommerce dedicada a la venta de productos naturales y videos talleres.</p>
+<p>se comienza por las entidades que son necesarias para poner en marcha el project, dando como resultado un primer diagrama.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">classDiagram
+class Cliente {
+    -id: String
+    -name: String
+    -lastName: String
+    -direction: String
+    -mail: String
+    -phone: int
+    
+}
+
+class Pedido {
+
+-id: String
+-idTipoPedido
+
+}
+
+class DetallePedido {
+    -id: String
+    -idPedido: String
+    -idTipoProducto: String
+    -Quantity: int
+    -Price : double
+
+}
+
+class Producto {
+-id: String
+-producto: String
+-description: String
+-quantity: int
+-price: double
+
+}
+class Taller{
+    -id: String
+    -link: String
+    -Description: String
+    -Price: double
+}
+
+Cliente --&gt; Pedido
+Pedido --&gt; Cliente
+Pedido --&gt; DetallePedido
+DetallePedido --&gt; Producto
+Producto --&gt; Taller
+Taller --&gt; Producto
+
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
 </div>
 
 
@@ -591,7 +657,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
