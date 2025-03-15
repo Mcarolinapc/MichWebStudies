@@ -16,7 +16,21 @@ website:
     - text: "DeVops"
       file: devops.qmd
     - text: "About"
-      file: about.qmd 
+      file: about.qmd
+    - text: "Kotlin"
+      file: "kotlin.qmd"
+    - text: "Introduccion a MySql"
+      file: "Sql.qmd"  
+    - text: "Android"
+      file: "androidEstudio.qmd"
+    - text: "NodeJs"
+      file: "nodeJs.qmd"
+    - text: "MongoDb"
+      file: "mongoDB.qmd"
+    - text: "Neo4j"
+      file: "Neo4j.qmd"
+    
+
 
     - sidebar:java
   sidebar:
