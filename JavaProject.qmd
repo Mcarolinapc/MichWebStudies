@@ -31,8 +31,7 @@ class Pedido {
 
 class DetallePedido {
     -id: String
-    -idPedido: String
-    -idTipoProducto: String
+    -idDetallePedido: String
     -Quantity: int
     -Price : double
 

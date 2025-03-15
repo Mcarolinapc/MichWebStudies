@@ -62,7 +62,7 @@ donde vamos a medir   según:
 **Baja energia:** momento del dia que no pienso solo ejecuto.
 
 
-![Analizando Tareas](img/tarea.png)
+c
 
 
 
