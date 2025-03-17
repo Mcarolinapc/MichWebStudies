@@ -3,7 +3,11 @@ title: "MichWebStudies"
 ---
 
 
-<h1>Qué hacer cuando no es como debería ser</h1>
+<h1>Notes page by Michelle for Michelle</h1>
+
+Página dedicada a mis apuntes en mi vida estudiantil.
+
+consejo para mi yo futuro:
 
 Fluye ,solo fluye aprende y no te frustres, todos empezamos igual.
 
@@ -38,7 +42,8 @@ Crear conocimiento que se pueda conectar a mis conocimientos base.
 |---------------------|-----------------------------------------|--------------------------------------------------------------------|------------------------|
 | Java SE             | Maven: `pom.xml`                        | IDE: IntelliJ IDEA 2023.3.3 (Community Edition)                    | Phase: Sand-Box        |
 | JDK open JDK21      | Lombok, JUnit 4.11/5, <br> JavaFaker    | (Community Edition) <br> Doc: Quarto Markdown <br> Version Control: git & GitHub <br> Mermaid UML | Linux21.3 Virginia <br> Agile: SCRUM |
-| JS
+
+
 :::
 
 

@@ -2,7 +2,7 @@
 
 Herramienta que acelera y simplifica el desarrollo de microservivios  y apps web.
 
--A grandes rasgos esun framework de bakend.<br>
+-A grandes rasgos es un framework de bakend.<br>
 -Es de codigo abierto.<br>
 -Se ejecuta en la maquina virtual dee java(JVM).<br>
 

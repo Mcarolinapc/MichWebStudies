@@ -1,1 +1,199 @@
-jlkasj
+# Que es Kotlin 
+
+Kotlin es un lenguaje de programación moderno y conciso desarrollado por JetBrains. Es interoperable con Java y se ha convertido en el lenguaje oficial para el desarrollo de Android.
+
+Características principales
+- Sintaxis concisa y expresiva → Menos código comparado con Java.
+- Interoperabilidad con Java → Puede usar librerías y código de Java sin problemas.
+- Seguridad contra NullPointerException → Gracias al manejo de nulabilidad (?).
+- Programación funcional y orientada a objetos → Soporta ambas paradigmas.
+- Coroutines para programación asíncrona → Más eficientes que los hilos tradicionales.
+- Compatibilidad multiplataforma → Puede usarse en Android, backend (Ktor, Spring Boot), y más.
+
+
+``` {.kotlin filename="sintaxisbasica"}
+fun main() {
+    val nombre: String = "Kotlin"
+    println("¡Hola, $nombre!")
+}
+```
+### Ejemplo de clases
+
+``` {.kotlin filename="sintaxisbasica"}
+class Persona(val nombre: String, val edad: Int) {
+    fun saludar() {
+        println("Hola, soy $nombre y tengo $edad años.")
+    }
+}
+
+fun main() {
+    val persona = Persona("Ana", 25)
+    persona.saludar()
+}
+
+```
+## 1.- Características clave de Kotlin
+
+**1.1. Sintaxis concisa y expresiva**
+Kotlin reduce la cantidad de código necesario en comparación con Java.
+
+``` {.kotlin filename="sintaxisbasica"}
+public class Persona {
+    private String nombre;
+    
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public String getNombre() {
+        return nombre;
+    }
+}
+
+```
+Mismo codigo en kotlin
+
+``` {.kotlin filename="sintaxisbasica"}
+class Persona(val nombre: String)
+
+```
+
+class Persona(val nombre: String)
+
+**1.2. Seguridad ante NullPointerException (NPE)**
+Uno de los problemas más comunes en Java es el NullPointerException. Kotlin maneja la nulabilidad de forma segura usando ?.
+
+Ejemplo:
+
+
+``` {.kotlin filename="sintaxisbasica"}
+var nombre: String? = null // Variable nullable
+println(nombre?.length) // No lanza error, devuelve null si nombre es null
+
+```
+
+Si intentamos acceder a nombre.length sin ?, Kotlin lo detectará en tiempo de compilación y no permitirá la ejecución.
+
+**1.3. Programación funcional y orientada a objetos**
+Kotlin combina programación orientada a objetos con programación funcional.
+
+**Funciones de orden superior**
+Podemos pasar funciones como parámetros y devolverlas.
+
+
+``` {.kotlin filename="sintaxisbasica"}
+fun operar(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
+    return operacion(a, b)
+}
+
+fun suma(x: Int, y: Int) = x + y
+
+fun main() {
+    val resultado = operar(5, 3, ::suma)
+    println(resultado) // 8
+}
+
+
+```
+Funcion Lambda
+``` {.kotlin filename="sintaxisbasica"}
+val multiplicar = { x: Int, y: Int -> x * y }
+println(multiplicar(4, 5)) // 20
+```
+**1.4. Coroutines para programación asíncrona**
+Kotlin usa coroutines para manejar tareas en segundo plano de forma eficiente sin bloquear el hilo principal.
+
+Ejemplo básico:
+
+``` {.kotlin filename="sintaxisbasica"}
+import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+    launch {
+        delay(1000L)
+        println("Tarea en segundo plano")
+    }
+    println("Tarea en el hilo principal")
+}
+
+```
+
+Ventaja: Son más ligeras que los hilos (Threads), consumen menos recursos y son más fáciles de manejar.
+
+
+#  2.- Uso de Kotlin en diferentes áreas
+
+**2.1. Desarrollo Android**
+
+Kotlin es el lenguaje principal para Android, usado con Jetpack Compose y el Android SDK.
+
+Ejemplo de un Composable en Jetpack Compose:
+
+``` {.kotlin filename="sintaxisbasica"}
+@Composable
+fun Saludo(nombre: String) {
+    Text(text = "¡Hola, $nombre!")
+}
+
+```
+
+**2.2. Desarrollo Backend (Spring Boot y Ktor)**
+Kotlin es compatible con frameworks backend como Spring Boot y Ktor.
+
+Ejemplo con Spring Boot:
+
+``` {.kotlin filename="sintaxisbasica"}
+@RestController
+@RequestMapping("/api")
+class MiControlador {
+    @GetMapping("/saludo")
+    fun saludo(): String {
+        return "Hola desde Kotlin y Spring Boot"
+    }
+}
+```
+
+Ejemplocon Ktor
+
+``` {.kotlin filename="sintaxisbasica"}
+fun main() {
+    embeddedServer(Netty, port = 8080) {
+        routing {
+            get("/") {
+                call.respondText("¡Hola, mundo!", ContentType.Text.Plain)
+            }
+        }
+    }.start(wait = true)
+}
+
+```
+
+**2.3. Bases de datos y Kotlin**
+Kotlin es compatible con múltiples bases de datos:
+
+PostgreSQL con Hibernate/Spring Data JPA
+MongoDB con el driver oficial
+Neo4j con la librería neo4j-ogm
+Ejemplo de conexión a PostgreSQL con Spring Boot y JPA:
+
+
+``` {.kotlin filename="sintaxisbasica"}
+@Entity
+data class Usuario(
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long,
+    val nombre: String
+)
+
+interface UsuarioRepositorio : JpaRepository<Usuario, Long>
+```
+
+puedes consultar la guia de kotlin en su pagina oficial
+
+[CDA](https://kotlinlang.org/docs/basic-syntax.html#creating-classes-and-instances)
+
+
+
+También puedes aprender todos los conceptos básicos de Kotlin con el curso gratuito:
+
+curso kotlin [CDA](https://hyperskill.org/courses?category=4&utm_source=jbkotlin_hs&utm_medium=referral&utm_campaign=kotlinlang-docs&utm_content=button_1&utm_term=22.03.23&_gl=1*1prfduc*_gcl_au*MTIyODU5NDExMy4xNzQyMjQzODE2*_ga*MTQ1MTQ1MTM0My4xNzMwMDY4MTYy*_ga_9J976DJZ68*MTc0MjI0MzgxNi42LjEuMTc0MjI0NDQyMC4xMi4wLjA.)
