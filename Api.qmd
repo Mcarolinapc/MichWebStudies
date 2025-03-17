@@ -1,0 +1,71 @@
+#  Resumen de API, API REST y API RESTful
+
+## ¿Qué es una API?
+ API (Application Programming Interface) es un conjunto de reglas y herramientas que permiten que dos aplicaciones se comuniquen entre sí.
+
+Ejemplo:
+
+Una app del clima usa una API para obtener datos del clima desde un servidor externo.
+Un sitio web de reservas usa una API de pagos para procesar transacciones con tarjetas de crédito.
+Clave: Una API no tiene que estar basada en la web; puede existir dentro de un software o entre sistemas internos.
+
+## ¿Qué es una API REST?
+REST (Representational State Transfer) es un estilo de arquitectura para diseñar APIs web de manera eficiente y escalable.
+
+ Principios de REST:
+ Cliente-Servidor → Separación entre frontend y backend.
+ Sin estado (Stateless) → Cada petición contiene toda la información necesaria, el servidor no almacena estado del cliente.
+ Cacheable → Las respuestas pueden ser almacenadas en caché para mejorar el rendimiento.
+ Interfaz uniforme → Uso de métodos HTTP estándar (GET, POST, PUT, DELETE).
+ Sistema en capas → Permite intermediarios como proxies o balanceadores de carga.
+ Código bajo demanda (opcional) → Puede enviar código ejecutable como scripts.
+
+ Ejemplo de una API REST:
+ Un servidor que devuelve información de usuarios:
+Solicitud:
+
+``` {.hhtpfilename="sintaxisbasica"}
+GET /usuarios/1 HTTP/1.1
+Host: api.ejemplo.com
+
+```
+Respuesta:
+
+``` {.hhtpfilename="sintaxisbasica"}
+{
+  "id": 1,
+  "nombre": "Juan",
+  "email": "juan@email.com"
+}
+
+```
+## ¿Qué es una API RESTful?
+ Una API RESTful es una API que cumple completamente con los principios REST.
+
+ Diferencia entre API REST y API RESTful:
+ REST es solo un conjunto de principios arquitectónicos.
+ RESTful significa que una API sigue correctamente esos principios.
+
+ Ejemplo de API NO RESTful (Mala práctica):
+
+ ``` {.hhtpfilename="sintaxisbasica"}
+
+ GET /obtenerUsuarios
+
+```
+Ejemplo de API RESTful (Buena práctica):
+
+ ``` {.hhtpfilename="sintaxisbasica"}
+GET /usuarios
+
+```
+
+Conclusión: 
+
+API → Permite que programas se comuniquen entre sí.
+API REST → Usa principios REST para comunicación web.
+API RESTful → Es una API que sigue correctamente REST.
+
+El siguiente video te ayudará a entenderlo en menos de 5 minutos.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JD6VNRdGl98?si=6xI8ZYtiKt-TwvP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
