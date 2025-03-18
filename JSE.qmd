@@ -1,0 +1,154 @@
+# Persistencia
+El protocolo HTTP es stateless (sin estado), es decir que se trata cada petición como una transacción independiente que no tiene relación con cualquier solicitud anterior, de modo que la comunicación se compone de pares independientes de solicitud y respuesta. El servidor no mantiene memoria de nada de lo ocurrido anteriormente.
+
+por otro lado JS no tiene acceso drecto ni al sistema de archivos ni del servidor, este se ejecuta en un sitio aislado llamado sandbox.
+
+
+Para poder guardar informacion en el cliente ,losnavegadores proporcionan librerias que forman parte de la uktima version de JS.
+
+Las principales son las cookies y LocalStorage.
+
+## Cookies
+
+**definicion:** Pequeñas cadenas de datos almacenadas en el navegador, definidas por RFC 6265.<br>
+
+Estos archivos contienen información sobre tus interacciones con la página, y se utilizan para mejorar la experiencia de usuario y personalizar el contenido.
+
+**Funcionamiento:** Se establecen desde el servidor con la cabecera Set-Cookie,El navegador las envía automáticamente en cada solicitud al mismo dominio con Cookie.<br>
+
+**Uso principal:** Autenticación. Se almacena un identificador de sesión para reconocer al usuario en solicitudes posteriores.<br>
+**Acceso en el navegador:** Mediante document.cookie.<br>
+Tienen múltiples atributos y configuraciones que afectan su comportamiento.<br>
+
+![construction ](img/cookies.jpg){.lightbox}
+
+## Escribiendo en document.cookie
+Podemos escribir en document.cookie. Pero no es una propiedad de datos, es un accessor (getter/setter). Una asignación a él se trata especialmente.
+
+Una operación de escritura a document.cookie actualiza solo las cookies mencionadas en ella, y no toca las demás.
+
+Por ejemplo, este llamado establece una cookie con el nombre user y el valor John:
+
+```{js}
+document.cookie = "user=John"; // Modifica solo la cookie llamada 'user'
+alert(document.cookie); // Muestra todas las cookies
+```
+
+Javascript tiene comandos específicos para manipular esos ficheros.<br>
+
+Se guardan variables y su valor (key, value). Máximo 4 KB por cookie, si nos pasamos se truncará.<br>
+
+Las cookies sólo se pueden modificar desde el dominio que las ha creado. Máximo 20 cookies por dominio.<br>
+
+Las cookies son las que, por ejemplo, mantienen una sesión (ej. Cesta compra) o ayudan a la publicidad contextual (ej. Hábitos de navegación).<br>
+
+## Tipos
+
+Existen varios tipos de cookies: temporales o de sesión, que se eliminan al cerrar el navegador, y persistentes, que permanecen por un tiempo definido. También pueden ser propias (creadas por la web visitada) o de terceros (generadas por otras empresas).
+
+Según su función, hay cookies necesarias para el funcionamiento del sitio, de análisis para mejorar la experiencia del usuario, publicitarias para anuncios personalizados, de personalización para almacenar preferencias y de redes sociales para compartir contenido.
+
+# Cookies de Configuración
+
+Las páginas web deben permitir la configuración de cookies, pudiendo desactivar algunas.<br>
+
+**Borrar cookies :** elimina inicios de sesión y preferencias, requiriendo volver a configurarlas. <br>
+**Desactivar cookies  de análisis :** evita el registro de actividad.<br> 
+
+**Desactivar las de preferencias :** impide que se guarde la configuración. 
+
+desactivar cookies mejora la privacidad, reduce la personalización. Se recomienda un equilibrio entre privacidad y experiencia.
+
+![talvez ](img/maybecokie.jpg){.lightbox}
+
+# Cookies: Implementación
+
+<p>Este código crea una cookie llamada saludo con el mensaje "Hola, bienvenido de nuevo!".</p>
+
+```{.js}
+document.cookie = "saludo=Hola, bienvenido de nuevo!; expires=Thu, 1 Jan 2026 12:00:00 UTC; path=/";
+```
+
+
+
+```{.js}
+function obtenerCookie(nombre) {
+  let nombreCookie = nombre + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let cookies = decodedCookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i];
+    while (cookie.charAt(0) == ' ') {
+      cookie = cookie.substring(1);
+    }
+    if (cookie.indexOf(nombreCookie) == 0) {
+      return cookie.substring(nombreCookie.length, cookie.length);
+    }
+  }
+  return "";
+}
+
+let saludo = obtenerCookie("saludo");
+if (saludo) {
+  alert(saludo); // Muestra el saludo de la cookie en una alerta
+} else {
+  alert("¡Bienvenido! Es la primera vez que visitas.");
+}
+```
+Esta parte verifica si existe la cookie llamada saludo y, si existe, muestra su contenido en un alert(). Si no existe, muestra un mensaje indicando que es la primera vez que se visita la página.
+
+:::{.callout-note}
+El atributo path define el ámbito de la cookie. En este caso, path=/ significa que la cookie estará disponible para todo el dominio y en todas las rutas del sitio web. Si especificas un subdirectorio en lugar de /, la cookie solo estará disponible para ese subdirectorio.
+:::
+
+# API Web Storage
+
+**API WebStorage :** nos provee una forma de guardar información del lado del cliente en forma de Clave/Valor, y a diferencia de las cookies esta información sólo es persistida del lado del cliente y no será enviada en cada petición que realicemos.
+
+**WebStorage :** nos brinda un conjunto de atributos y métodos para poder manipularlos.<br> 
+
+Existen dos implementaciones para ello:
+
+**LocalStorage :**, nos permite almacenar información (strings) de manera permanente para múltiples ventanas o pestañas, de esta manera si cerramos el navegador no perdemos la información guardada a menos que decidamos eliminarla manualmente. Podemos almacenar entre 5 y 10 mb de información y a diferencia de las cookies, no será enviada al servidor.<br>
+
+**SessionStorage :**, es igual que el localStorage, con la salvedad que si cerramos el navegador la información se pierde.
+
+Tanto el localStorage como el sessionStorage tienen los mismos métodos y propiedades: 
+
+.setItem(clave, valor) – almacenar un par clave/valor.
+.getItem(clave) – obtener el valor por medio de la clave.
+.removeItem(clave) – eliminar la clave y su valor.
+.clear() – borrar todo.
+.key(índice) – obtener la clave de una posición dada.
+.length – el número de ítems almacenados.
+
+
+# Implementación
+
+```{.js}
+// Verificamos si la propiedad 'nombre' existe en localStorage
+if (!localStorage.getItem('nombre')) {
+  // Si no existe, pedimos el nombre del usuario y lo guardamos en localStorage
+  let nombre = prompt("¿Cuál es tu nombre?");
+  localStorage.setItem('nombre', nombre);
+  alert("¡Hola, " + nombre + "! Bienvenido por primera vez.");
+} else {
+  // Si existe, leemos el nombre desde localStorage y lo saludamos
+  let nombre = localStorage.getItem('nombre');
+  alert("¡Hola de nuevo, " + nombre + "!");
+  // Después de saludar, eliminamos la propiedad 'nombre' del localStorage
+  localStorage.removeItem('nombre');
+  alert("Tu nombre ha sido borrado del almacenamiento.");
+}
+```
+
+Primera vez que se visita la página:
+No existe la propiedad nombre en localStorage.
+Se le pide al usuario que ingrese su nombre mediante un prompt.
+El nombre se guarda en localStorage.
+El usuario es saludado con su nombre y se le da la bienvenida.
+Visitas posteriores:
+La propiedad nombre existe en localStorage.
+El nombre se lee desde localStorage.
+El usuario es saludado nuevamente.
+La propiedad nombre se elimina de localStorage, por lo que en la próxima visita, el flujo vuelve a empezar.
